@@ -19,6 +19,9 @@ app.get("/images/:imageName", (req, res) => {
   readStream.pipe(res);
 });
 
+app.get("/hello", (req, res) => {
+  res.send("hello");
+});
 app.get("/api/images", async (req, res) => {
   const images = await database.getImages();
 
